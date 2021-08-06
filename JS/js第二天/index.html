@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<script type="text/javascript" src="js/day-01.js">
+			
+		</script>
+	</head>
+	<body style="height: 3000px;">
+		<button type="button" onclick="func()">跳转到红页面</button><br>
+		<button type="button" onclick="func3()">新标签打开蓝页面</button><br>
+		<button type="button" onclick="func1()">新标签打开红页面</button><br>
+		<button type="button" onclick="func2()">关闭当前页面</button><br>
+		<button type="button" onclick="func4()">清除计时器</button><br>
+		<button type="button" onclick="func5()">重新创建计时器</button><br>
+		<span>hello world!</span><br>
+		<span>hello js!</span>
+		
+		<script type="text/javascript">
+			// 浏览器已完成页面的加载，才会执行onload（当页面完全加载成功才会触发onload事件）
+			/*
+			window.onload=function(){
+				alert("页面加载成功")
+			}
+			// 多个onload会覆盖前边的，只保留最后一个
+			window.onload=function(){
+				alert("页面加载成功222")
+			}
+			alert("你瞅啥")
+			*/
+		   // 滚动事件
+		   /*
+			window.onscroll=function(){
+				// console.log("发上了滚动")
+				var a=document.documentElement.scrollTop||document.body.scrollTop
+				console.log(a)
+				// 满足条件执行某个事件
+				if(a==500){
+					console.log("高度为500")
+				}
+			}	
+			*/
+		   /*
+			window.onresize=function(){
+				w=document.documentElement.clientWidth||document.body.clientWidth||document.inner.clientWidth
+				h=document.documentElement.clientHeight||document.body.clientHeight||document.inner.clientHeight
+				console.log(w,h)
+			}
+			*/
+		   // time为计时器的编号
+		   var time
+		   time= window.setInterval(function(){console.log("sunck is good man")},3000)
+		   function func4(){
+			   // 清除定时器
+			   window.clearInterval(time)
+		   }
+		   function func5(){
+				// 重新创建计时器
+				time = window.setInterval(function(){console.log("sunck is good man")},3000)
+		   }
+		   // 在script标签下创建的所有变量都是window的属性，比如下边的a，可以直接写成a，或者window.a 结果都是一样的
+		   var a=10
+		   console.log(a)
+		   console.log(window.a)
+		   // setTimeout相当与window.setTimeout
+		   var time=setTimeout(function(){
+			   console.log("setTimeout is ok")
+		   },3000)
+		   
+		</script>
+	</body>	
+</html>

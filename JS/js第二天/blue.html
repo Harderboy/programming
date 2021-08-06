@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>blue</title>
+	</head>
+	<body style="height: 200px; background-color: blue;">
+		<button type="button" onclick="func1()">打开新页面</button>
+		<button type="button" onclick="func2()">关闭当前页面</button>
+		<script type="text/javascript">
+			var window2;
+			function func1(){
+				// html 超链接标签 href 属性 target="_blank" 的作用是使打开的链接以新开的窗口形式出现。
+				window.open("red.html","blank","width=200px,height=400px,top=0,left=20px");
+			}
+			
+			function func2(){
+				window.close()
+			}
+		</script>
+	</body>
+</html>
